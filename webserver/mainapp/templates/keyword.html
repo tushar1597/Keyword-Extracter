@@ -1,0 +1,224 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Extreme Warrior|Keyword</title>
+        <link rel="icon" href="{% static 'img/icon.ico' %}" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+        <link rel="stylesheet" href="{% static 'tagfiles/jquery.tag-editor.css' %}">
+        <script type="text/javascript">
+
+            function preloading() {
+            var sourceOfPicture = "{% static 'abcd.gif' %}";
+            var img = document.getElementById('bigpic')
+            img.src = sourceOfPicture.replace('90x90', '225x225');
+            img.style.display = "block";
+            } 
+        </script>
+        <style type="text/css">
+            footer.footer {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            }
+            textarea {
+            width: 100%; height: 29px; padding: .3em .5em; border: 1px solid #ddd; font-size: .9em;
+            box-sizing: border-box; margin: 0 0 20px;
+        }
+        </style>
+    </head>
+    <body>
+<!-- ================================================================================================ -->
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Extreme Warrior</h3>
+                    <strong>EW</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="/index/">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li  class="active">
+                        <a href="/challenge/">
+                            <i class="fa fa-code"></i>
+                            Challenges
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about/">
+                            <i class="glyphicon glyphicon-briefcase"></i>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-duplicate"></i>
+                            Tata
+                        </a>
+                    </li>
+
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="https://www.tatainnoverse.com/">Tatainnoverse</a></li>
+                            <li><a href="http://www.tatacrucible.com/">Tatacrucible</a></li>
+                            <li><a href="https://www.tatainnoverse.com/tatacruciblehackathon/challenge.php?id=90">The Solution Hunt Pack</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.tatainnoverse.com/page.php?page=MTMw">
+                            <i class="glyphicon glyphicon-paperclip"></i>
+                            FAQ (Tatainnoverse)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact/">
+                            <i class="glyphicon glyphicon-send"></i>
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+
+               
+                </li>
+                </ul>
+                <ul class="list-unstyled CTAs">
+                    <li><a href="https://github.com/bcrazydreamer/Extreme_Warrior" class="download"><center>GitHub</center></a></li>
+                </ul>
+                <!-- Search logic -->
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="/search/">
+                            <i class="fa fa-search"></i>
+                                EW Search Engine
+                        </a>
+                    </li>
+            </nav>
+<!-- ====================================================================================================  -->
+            <div id="content">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="/index/">Home</a></li>
+                                <li><a href="/challenge/">Chellenge</a></li>
+                                <li><a href="/about/">About</a></li>
+                                <li><a href="https://github.com/bcrazydreamer/Extreme_Warrior">Devlopment</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+<!-- ==================================================================================================-->
+<center><h1><b>The Solution Hunt Pack</b></h1></center>
+<center>
+
+
+<div style="border-top: 1px solid #eee;border-bottom:1px solid #eee;background:#fafafa;margin:30px 0;padding:20px 5px">
+        <div style="padding :0 7px 0 5px;max-width:900px;margin:auto">
+            <img style="display:none;" id="bigpic" src="bigpic" />
+            <form action="/solution/" method="post" novalidate onsubmit="preloading()">
+                {% csrf_token %}
+                <textarea id="hero-demo" name="workb">
+                    {% for i in keys %}
+                        {{i}},
+                    {% endfor %}
+                </textarea>
+                <br><br>
+                <hr>
+               <center><input type="submit" name="submitbutton" class="btn btn-primary"></center>
+            </form>
+        </div>
+    </div>
+
+
+<!-- ================================================================================================ -->
+<!-- Footer -->
+<hr>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+            <center>
+                <a href="/index/" class="btn btn-default">Home</a>&nbsp;
+                <a href="/challenge/" class="btn btn-default">Challenges</a>
+                <a href="/about/" class="btn btn-default">About</a>
+            <p>&copy; Extreme Warrior 2018. All Rights Reserved.</p>
+            <a href="https://github.com/bcrazydreamer/Extreme_Warrior" class="fa fa-github fa-2x"></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bcrazydreamer@email.com" class="fa fa-envelope-square fa-2x"></a>
+            <br>
+            </center>
+          </div>
+        </div>
+    </footer>
+   </div>
+</div>
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+    <script src="{% static 'tagfiles/jquery.caret.min.js' %}"></script> <!--Suggestions-->
+    <script src="{% static 'tagfiles/jquery.tag-editor.js' %}"></script>
+    <script>
+        (function($){var proto=$.ui.autocomplete.prototype,initSource=proto._initSource;function filter(array,term){var matcher=new RegExp($.ui.autocomplete.escapeRegex(term),"i");return $.grep(array,function(value){return matcher.test($("<div>").html(value.label||value.value||value).text());});}$.extend(proto,{_initSource:function(){if(this.options.html&&$.isArray(this.options.source)){this.source=function(request,response){response(filter(this.options.source,request.term));};}else{initSource.call(this);}},_renderItem:function(ul,item){return $("<li></li>").data("item.autocomplete",item).append($("<a></a>")[this.options.html?"html":"text"](item.label)).appendTo(ul);}});})(jQuery);
+        var cache = {};
+        //For suggestions
+        function googleSuggest(request, response) {
+            var term = request.term;
+            if (term in cache) { response(cache[term]); return; }
+            $.ajax({
+                url: 'https://query.yahooapis.com/v1/public/yql',
+                dataType: 'JSONP',
+                data: { format: 'json', q: 'select * from xml where url="http://google.com/complete/search?output=toolbar&q='+term+'"' },
+                success: function(data) {
+                    var suggestions = [];
+                    try { var results = data.query.results.toplevel.CompleteSuggestion; } catch(e) { var results = []; }
+                    $.each(results, function() {
+                        try {
+                            var s = this.suggestion.data.toLowerCase();
+                            suggestions.push({label: s.replace(term, '<b>'+term+'</b>'), value: s});
+                        } catch(e){}
+                    });
+                    cache[term] = suggestions;
+                    response(suggestions);
+                }
+            });
+        }
+        $(function() 
+        {
+            $('#hero-demo').tagEditor({
+                placeholder: 'Enter tags ...',
+                autocomplete: { source: googleSuggest, minLength: 3, delay: 250, html: true, position: { collision: 'flip' } }
+            });
+            function tag_classes(field, editor, tags) {
+                $('li', editor).each(function(){
+                    var li = $(this);
+                    if (li.find('.tag-editor-tag').html() == 'red') li.addClass('red-tag');
+                    else if (li.find('.tag-editor-tag').html() == 'green') li.addClass('green-tag')
+                    else li.removeClass('red-tag green-tag');
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+
+    </body>
+</html>

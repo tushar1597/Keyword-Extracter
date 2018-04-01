@@ -1,0 +1,181 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Extreme Warrior|About</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="{% static 'img/icon.ico' %}" type="image/x-icon" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+        <link rel="stylesheet" href="{% static 'dev/a.css' %}">
+        <link rel="stylesheet" href="{% static 'dev/rb.css' %}">
+        <style type="text/css">
+            footer.footer {
+            padding-top: 4rem;
+             padding-bottom: 4rem;
+            }
+            
+    </style>
+    </head>
+    <body>
+<!-- ================================================================================================ -->
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Extreme Warrior</h3>
+                    <strong>EW</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="/index/">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/challenge/">
+                            <i class="fa fa-code"></i>
+                            Challenges
+                        </a>
+                    </li>
+                    <li  class="active">
+                        <a href="/about/">
+                            <i class="glyphicon glyphicon-briefcase"></i>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-duplicate"></i>
+                            Tata
+                        </a>
+
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="https://www.tatainnoverse.com/">Tatainnoverse</a></li>
+                            <li><a href="http://www.tatacrucible.com/">Tatacrucible</a></li>
+                            <li><a href="https://www.tatainnoverse.com/tatacruciblehackathon/challenge.php?id=90">The Solution Hunt Pack</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.tatainnoverse.com/page.php?page=MTMw">
+                            <i class="glyphicon glyphicon-paperclip"></i>
+                            FAQ (Tatainnoverse)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact/">
+                            <i class="glyphicon glyphicon-send"></i>
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+
+                </li>
+                </ul>
+                <ul class="list-unstyled CTAs">
+                    <li><a href="https://github.com/bcrazydreamer/Extreme_Warrior" class="download"><center>GitHub</center></a></li>
+                </ul>
+                <!-- Search logic -->
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="/search/">
+                            <i class="fa fa-search"></i>
+                                EW Search Engine
+                        </a>
+                    </li>
+            </nav>
+<!-- ====================================================================================================  -->
+            <div id="content">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="/index/">Home</a></li>
+                                <li><a href="/challenge/">Chellenge</a></li>
+                                <li><a href="/about/">About</a></li>
+                                <li><a href="https://github.com/bcrazydreamer/Extreme_Warrior">Devlopment</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+<!-- ==================================================================================================-->
+<div class="main-content">
+  
+  <center><h4>
+      <img src="{% static 'img/thank.png' %}">
+      <br>
+      <br>
+      <hr>
+      We have received your message and would like to thank you for writing to us. If your inquiry is urgent, please use the <b>Contact</b> number mentioned on contact page. Otherwise, we will reply by email as soon as possible.
+      <br>
+      <br>
+      <br>
+      (Devloper Extreme Warrior)
+        <br>
+        <br>
+        <br>
+        <hr>
+
+  </h4></center>    
+ 
+
+
+<center>
+<div>
+     <iframe width="800" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=800&cp=30.0368304098835~77.16331342249786&lvl=15&typ=d&sty=h&src=SHELL&FORM=MBEDV8" scrolling="no">
+     </iframe>
+</div>
+</center>
+
+
+
+
+</div>
+<!-- Footer -->
+<hr>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+            <center>
+                <a href="/index/" class="btn btn-default">Home</a>&nbsp;
+                <a href="/challenge/" class="btn btn-default">Challenges</a>
+                <a href="/about/" class="btn btn-default">About</a>
+            <p>&copy; Extreme Warrior 2018. All Rights Reserved.</p>
+            <a href="https://github.com/bcrazydreamer/Extreme_Warrior" class="fa fa-github fa-2x"></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bcrazydreamer@email.com" class="fa fa-envelope-square fa-2x"></a>
+            <br>
+            </center>
+          </div>
+        </div>
+    </footer>
+
+
+
+   </div>
+</div>
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+    </body>
+</html>

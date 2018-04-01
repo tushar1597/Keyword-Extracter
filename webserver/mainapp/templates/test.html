@@ -1,0 +1,80 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Extreme Warrior</title>
+	<link rel="icon" href="{% static 'icon.ico' %}" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/maincss.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+
+	<aside class="sidebar-left">
+		<a class="company-logo" href="#">Extreme Warrior</a>
+		<div class="sidebar-links">
+			<a class="link-white selected" href="#"><i class="fa fa-user"></i>User</a>
+			<a class="link-green" href="/challenge/"><i class="fa fa-newspaper-o"></i>Challenges</a>
+			<a class="link-blue" href="https://github.com/bcrazydreamer"><i class="fa fa-code"></i>Coding</a>
+			<a class="link-red" href="#"><i class="fa fa-heart-o"></i>Favorites</a>
+			<a class="link-yellow" href="#"><i class="fa fa-info-circle"></i>Projects</a>
+		</div>
+	</aside>
+
+	<div class="main-content">
+		<br>
+		<hr>
+		<form method="post" novalidate>
+		{%csrf_token%}
+	    {{ form }}
+		</form>
+		<hr>
+		<hr>
+		
+		<div class="list-group">
+     		<div class="list-group-item active">
+        	 <h4 class="list-group-item-heading">
+        			 {{search}}
+        	 </h4>
+     		</div>
+			{% for link in links %}
+				<a href={{link}} class="list-group-item" target="_blank">
+    			<b>
+    				<h3>{{ link }}</h3>
+    			</b>
+    			<br>
+    			</a>
+			{% endfor %}
+
+		</div>
+
+</div>
+</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+
+		$(function () {
+
+			var links = $('.sidebar-links > a');
+
+			links.on('click', function () {
+
+				links.removeClass('selected');
+				$(this).addClass('selected');
+
+			})
+		});
+
+	</script>
+
+</body>
+
+</html>
